@@ -6,6 +6,7 @@
   },
   "features": [
     {
+      "id": "0001",
       "type": "Feature",
       "properties": {
         "CAR_ID": 960,
@@ -25,6 +26,7 @@
       }
     },
     {
+      "id": "0002",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1219,
@@ -44,6 +46,7 @@
       }
     },
     {
+      "id": "0003",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1157,
@@ -63,6 +66,7 @@
       }
     },
     {
+      "id": "0004",
       "type": "Feature",
       "properties": {
         "CAR_ID": 9,
@@ -82,6 +86,7 @@
       }
     },
     {
+      "id": "0005",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1160,
@@ -101,6 +106,7 @@
       }
     },
     {
+      "id": "0006",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1693,
@@ -120,6 +126,7 @@
       }
     },
     {
+      "id": "0007",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1717,
@@ -139,6 +146,7 @@
       }
     },
     {
+      "id": "0008",
       "type": "Feature",
       "properties": {
         "CAR_ID": 137,

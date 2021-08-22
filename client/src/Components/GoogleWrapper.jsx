@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   GoogleMap,
   Marker,
@@ -8,27 +8,8 @@ import * as carData from "../carData.json";
 import mapStyles from "../Styles/mapStyles";
 import * as FaIcons from 'react-icons/fa';
 
-const GoogleWrapper = (props) => {
-    const [ selectedCar, setSelectedCar ] = useState(null);
-    const [ showMarker, setMarker ] = useState(false);
-
-    useEffect(() => {
-      setMarker(true);
-    }, [])
-
-    useEffect(() => {
-      const listener = e => {
-        if (e.key === "Escape") {
-          setSelectedCar(null);
-        }
-      };
-      setMarker(true);
-      window.addEventListener("keydown", listener);
-      return () => {
-        window.removeEventListener("keydown", listener);
-      };
-    }, []);
-  
+const GoogleWrapper = (props) => {  
+  const { selectedCar, showMarker, setSelectedCar } = props;
     return (
       <GoogleMap
         defaultZoom={10}

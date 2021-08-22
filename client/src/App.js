@@ -9,6 +9,8 @@ import * as carData from "./carData.json";
 
 export default function App() {
   const [ sidebar, setSidebar ] = useState(true);
+  const [ selectedCar, setSelectedCar ] = useState(null);
+  const [ showMarker, setMarker ] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
   const [ mapChange, setMapChange ] = useState({
     goemetry: {
@@ -17,7 +19,31 @@ export default function App() {
     },
     name: ""
   });
-  const MapWrapper = withScriptjs(withGoogleMap(GoogleWrapper));
+
+  useEffect(() => {
+    setMarker(true);
+  }, [])
+
+  useEffect(() => {
+    const listener = e => {
+      if (e.key === "Escape") {
+        setSelectedCar(null);
+      }
+    };
+    setMarker(true);
+    window.addEventListener("keydown", listener);
+    return () => {
+      window.removeEventListener("keydown", listener);
+    };
+  }, []);
+
+  const MapWrapper = withScriptjs(withGoogleMap(() => 
+    <GoogleWrapper 
+      selectedCar={selectedCar}
+      showMarker={showMarker}
+      setSelectedCar={setSelectedCar}
+    />));
+    
   useEffect(() => {
     navClick();
   }, [])
