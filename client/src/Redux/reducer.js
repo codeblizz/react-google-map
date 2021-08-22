@@ -7,7 +7,8 @@
 // } from "./typestypes";
 
 // const initialState = { 
-//   items: [], 
+//   marker: [], 
+//   show: true
 // }
 
 // export default (state = initialState, {type, payload}) => {
@@ -15,27 +16,32 @@
 //       case MERCEDES:
 //         return {
 //                 ...state,
+//                 marker: payload
 //                 show: true
 //               };
 //       case WAGONR:
 //         return { 
 //                 ...state,
-//                 loading: true
+//                 marker: payload,
+//                 show: true
 //                 };
 //       case UP80CJ:
 //         return { 
 //                 ...state,
-//                 error: payload
+//                 marker: payload,
+//                 show: true
 //                 };
 //       case UP11T:
 //         return {  
 //                 ...state,
-//                 succes:  payload
+//                 marker:  payload,
+//                 show: true
 //                 };
 //       case UP80CT:
 //         return { 
 //                 ...state, 
-//                 items:  payload 
+//                 marker:  payload,
+//                 show: true
 //                 }
 //       default:
 //         return state; 

@@ -11,12 +11,13 @@ import SearchBox from './SearchBox';
 function Navbar(props) {
   const { sidebar, showSidebar } = props;
   const [ queryInput, setQueryInput ] = useState("");
+  
 
   const onChange = (e) => {
     const value = e.target.value;
     setQueryInput(value);
   }
-  
+
   const navClick = () => {
 
   }
