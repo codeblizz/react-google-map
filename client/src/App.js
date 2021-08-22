@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { config } from "./utils";
 
 export default function App() {
-  const [sidebar, setSidebar] = useState(true);
+  const [ sidebar, setSidebar ] = useState(true);
   const showSidebar = () => setSidebar(!sidebar);
   const MapWrapper = withScriptjs(withGoogleMap(GoogleWrapper));
   return (

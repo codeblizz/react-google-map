@@ -6,10 +6,10 @@ import {
 } from "react-google-maps";
 import * as carData from "../carData.json";
 import mapStyles from "../Styles/mapStyles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import * as IoIcons from 'react-icons/fa';
 
 const GoogleWrapper = (props) => {
-    const [ selectedPark, setSelectedPark ] = useState(null);
+    const [ selectedCar, setSelectedCar ] = useState(null);
     const [ showMarker, setMarker ] = useState(false);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const GoogleWrapper = (props) => {
     useEffect(() => {
       const listener = e => {
         if (e.key === "Escape") {
-          setSelectedPark(null);
+          setSelectedCar(null);
         }
       };
       setMarker(true);
@@ -35,36 +35,36 @@ const GoogleWrapper = (props) => {
         defaultCenter={{ lat: 25.094697724251578, lng: 55.15988586164573 }} 
         defaultOptions={{ styles: mapStyles }}
       >
-        {carData.features.map(park => (
+        {carData.features.map(car => (
           showMarker &&
           <Marker
-            key={park.properties.PARK_ID}
+            key={car.properties.CAR_ID}
             position={{
-              lat: park.geometry.coordinates[1],
-              lng: park.geometry.coordinates[0]
+              lat: car.geometry.coordinates[1],
+              lng: car.geometry.coordinates[0]
             }}
             onClick={() => {
-              setSelectedPark(park);
+              setSelectedCar(car);
             }}
             icon={{
-              url: () => <FontAwesomeIcon icon="location-dot"/>,
+              url: () => <IoIcons.location-sharp/>,
               scaledSize: new window.google.maps.Size(25, 25)
             }}
           />
         ))}
-        {selectedPark && (
+        {selectedCar && (
           <InfoWindow
             onCloseClick={() => {
-              setSelectedPark(null);
+              setSelectedCar(null);
             }}
             position={{
-              lat: selectedPark.geometry.coordinates[1],
-              lng: selectedPark.geometry.coordinates[0]
+              lat: selectedCar.geometry.coordinates[1],
+              lng: selectedCar.geometry.coordinates[0]
             }}
           >
             <div>
-              <h2>{selectedPark.properties.NAME}</h2>
-              <p>{selectedPark.properties.DESCRIPTIO}</p>
+              <h2>{selectedCar.properties.NAME}</h2>
+              <p>{selectedCar.properties.DESCRIPTIO}</p>
             </div>
           </InfoWindow>
         )}
