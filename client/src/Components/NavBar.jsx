@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom';
 import { MenuNames } from "./MenuNames";
@@ -9,18 +9,14 @@ import { IconContext } from 'react-icons';
 import SearchBox from './SearchBox';
 
 function Navbar(props) {
-  const { sidebar, showSidebar } = props;
+  const { sidebar, showSidebar, navClick } = props;
   const [ queryInput, setQueryInput ] = useState("");
-  
 
   const onChange = (e) => {
     const value = e.target.value;
     setQueryInput(value);
   }
 
-  const navClick = () => {
-
-  }
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>

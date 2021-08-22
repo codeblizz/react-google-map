@@ -12,7 +12,7 @@ export const MenuNames = [
     cName: 'nav-text'
   },
   {
-    title: 'WargonR',
+    title: 'WargonR-0938',
     path: '/wargonr',
     exact: true,
     icon: discIcons,
@@ -26,7 +26,7 @@ export const MenuNames = [
     cName: 'nav-text'
   },
   {
-    title: 'WargonR',
+    title: 'WargonR-0123',
     path: '/wargonr',
     exact: true,
     icon: discIcons,
