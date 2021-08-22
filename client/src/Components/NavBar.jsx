@@ -10,12 +10,15 @@ import SearchBox from './SearchBox';
 
 function Navbar(props) {
   const { sidebar, showSidebar } = props;
+  const [ queryInput, setQueryInput ] = useState("");
 
-  const onChange = () => {
-
+  const onChange = (e) => {
+    const value = e.target.value;
+    setQueryInput(value);
   }
+  
   const navClick = () => {
-    
+
   }
   return (
     <>
@@ -25,7 +28,7 @@ function Navbar(props) {
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
         </div>
-        <div className="nav-menu searchbar"><SearchBox onChange={onChange}/></div>
+        <div className="nav-menu searchbar"><SearchBox onChange={onChange} queryInput={queryInput}/></div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items'>
             <li className='navbar-toggle' onClick={showSidebar}>
