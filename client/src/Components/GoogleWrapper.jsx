@@ -6,7 +6,7 @@ import {
 } from "react-google-maps";
 import * as carData from "../carData.json";
 import mapStyles from "../Styles/mapStyles";
-import * as IoIcons from 'react-icons/fa';
+import * as FaIcons from 'react-icons/fa';
 
 const GoogleWrapper = (props) => {
     const [ selectedCar, setSelectedCar ] = useState(null);
@@ -47,7 +47,7 @@ const GoogleWrapper = (props) => {
               setSelectedCar(car);
             }}
             icon={{
-              url: () => <IoIcons.location-sharp/>,
+              url: () => <FaIcons.FaLocationArrow/>,
               scaledSize: new window.google.maps.Size(25, 25)
             }}
           />
