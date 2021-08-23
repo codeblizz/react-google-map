@@ -35,7 +35,7 @@ function Navbar(props) {
             </li>
             {MenuNames.map((item, index) => {
               return (
-                <li key={index} className={item.cName} onClick={navClick}>
+                <li key={index} className={item.cName} onClick={() => navClick(item)}>
                   <Link to={item.path} className="nav-text">
                     {item.icon}
                     <span>{item.title}</span>

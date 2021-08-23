@@ -6,7 +6,6 @@
   },
   "features": [
     {
-      "id": "0001",
       "type": "Feature",
       "properties": {
         "CAR_ID": 960,
@@ -22,11 +21,10 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [25.3372987731628, 55.383321536272049]
+        "coordinates": [25.095665350971384, 55.16654716145473]
       }
     },
     {
-      "id": "0002",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1219,
@@ -42,11 +40,10 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [25.546518086577947, 55.467134581917357]
+        "coordinates": [25.097103316925924, 55.36723380698797]
       }
     },
     {
-      "id": "0003",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1157,
@@ -62,14 +59,13 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [25.898610599532319, 55.295014379864874]
+        "coordinates": [25.294382826535643, 55.26414390208838]
       }
     },
     {
-      "id": "0004",
       "type": "Feature",
       "properties": {
-        "CAR_ID": 9,
+        "CAR_ID": 2019,
         "FACILITYID": 28006,
         "NAME": "UP11T-6238",
         "ADDRESS": "2785 8th Line Road",
@@ -82,11 +78,10 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [25.468561642270757, 55.23032561834377]
+        "coordinates": [25.192361851655667, 55.47616019892011]
       }
     },
     {
-      "id": "0005",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1160,
@@ -102,11 +97,10 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [55.926651366520872, 55.260659774950561]
+        "coordinates": [55.19609285612884, 55.372941547983044]
       }
     },
     {
-      "id": "0006",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1693,
@@ -122,11 +116,10 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [25.760933332842754, 55.345566668964558]
+        "coordinates": [25.299707158204914, 55.377190167219976] 
       }
     },
     {
-      "id": "0007",
       "type": "Feature",
       "properties": {
         "CAR_ID": 1717,
@@ -142,16 +135,15 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [25.625996131485707, 55.375401587496128]
+        "coordinates": [25.10184459842511, 55.37817722017401]
       }
     },
     {
-      "id": "0008",
       "type": "Feature",
       "properties": {
         "CAR_ID": 137,
         "FACILITYID": 28019,
-        "NAME": "WargonR-0123",
+        "NAME": "WargonR-0938",
         "ADDRESS": "65 Stonehaven Drive",
         "OPEN": null,
         "NOTES": "Outdoor",
@@ -162,7 +154,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [25.857009812435976, 55.290758029776626]
+        "coordinates": [25.092128660098336, 55.27216907175815]
       }
     }
   ]

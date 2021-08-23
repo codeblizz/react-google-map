@@ -13,11 +13,12 @@ export default function App() {
   const [ showMarker, setMarker ] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
   const [ mapChange, setMapChange ] = useState({
-    goemetry: {
-      lat: "",
-      lng: ""
+    id: null,
+    geometry: {
+      coordinates: []
     },
-    name: ""
+    name: "",
+    desc: ""
   });
 
   useEffect(() => {
@@ -37,27 +38,40 @@ export default function App() {
     };
   }, []);
 
-  const MapWrapper = withScriptjs(withGoogleMap(() => 
+  const MapWrapper = withScriptjs(withGoogleMap(() => (
     <GoogleWrapper 
       selectedCar={selectedCar}
       showMarker={showMarker}
       setSelectedCar={setSelectedCar}
-    />));
-    
-  useEffect(() => {
-    navClick();
-  }, [])
+      mapChange={mapChange}
+    />
+  )));
 
-  const navClick = () => {
-    carData.features.map(data => {
-      setMapChange({
-        goemetry: {
-          lat: data.coordinates,
-          lng: data.coordinates
-        },
-        name: data.properties.NAME
+  const navClick = (item) => {
+    if(item){
+      carData.features.map(data => {
+        setMapChange({
+          id: data.properties.CAR_ID,
+          geometry: {
+            coordinates: [
+              data.geometry.coordinates[0],
+              data.geometry.coordinates[1]
+            ]
+          },
+          name: data.properties.NAME,
+          desc: data.properties.DESCRIPTIO
+        })
       })
-    })
+    } else {
+        setMapChange({
+          id: null,
+          geometry: {
+            coordinates: []
+          },
+          name: "",
+          desc: ""
+        })
+    }
   }
 
   return (
@@ -72,6 +86,7 @@ export default function App() {
               path={name.path}
               children={() => (
                 <MapWrapper
+                  showMarker
                   googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${
                     config.REACT_APP_GOOGLE_KEY
                   }`}
