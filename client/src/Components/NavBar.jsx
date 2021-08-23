@@ -37,7 +37,7 @@ function Navbar(props) {
               return (
                 <li key={index} className={item.cName} onClick={() => navClick(item)}>
                   <Link to={item.path} className="nav-text">
-                    {item.icon}
+                    <span>{item.icon}</span>
                     <span>{item.title}</span>
                   </Link>
                 </li>
