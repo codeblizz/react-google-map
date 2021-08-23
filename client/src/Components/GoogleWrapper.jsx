@@ -4,7 +4,6 @@ import {
   Marker,
   InfoWindow
 } from "react-google-maps";
-import * as carData from "../carData.json";
 import mapStyles from "../Styles/mapStyles";
 
 const GoogleWrapper = (props) => {  
@@ -33,8 +32,8 @@ const GoogleWrapper = (props) => {
             setSelectedCar(null);
           }}
           position={{
-            lat: mapChange.geometry.coordinates[1],
-            lng: mapChange.geometry.coordinates[0]
+            lat: mapChange.geometry.coordinates[0],
+            lng: mapChange.geometry.coordinates[1]
           }}
         >
           <div>

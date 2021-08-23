@@ -49,7 +49,8 @@ export default function App() {
 
   const navClick = (item) => {
     if(item){
-      carData.features.map(data => {
+      let filterdata = carData.features.filter(data => item.id === data.properties.CAR_ID)
+      filterdata.map(data => {
         setMapChange({
           id: data.properties.CAR_ID,
           geometry: {
